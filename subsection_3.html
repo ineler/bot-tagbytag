@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Energy conservation subsection 1</title>	
+		<link rel="stylesheet" href="styles.css">                                                          
+	</head>
+	<body>
+		<div id="preloader"></div>
+		<div id="content" style = "position: relative; margin: 0; padding: 0px;"><br><br><br><br>
+			<div class="slideshow-container">
+
+				<div class="mySlides fade" style = "background-color: white;">
+				  <div class="numbertext">1 / 3</div>
+				  <center><a href = "index.html"><img src="Rocket.gif" style="width: 500px;"></a></center>
+				  <div class="text" style = "color: black;">Home</div>
+				</div>
+				
+				<div class="mySlides fade" style = "background-color: white;">
+				  <div class="numbertext">2 / 3</div>
+				  <center><a href = "subsection_1.html"><img src="Gif.gif" style="width:500px"></a></center>
+				  <div class="text" style = "color: darkgreen;">What is energy conservation?</div>
+				</div>
+				
+				<div class="mySlides fade" style = "background-color: #015089">
+				  <div class="numbertext">3 / 4</div>
+				  <center><a href = "subsection_2.html"><img src="Energy1.gif" style="width:500px"></a></center>	
+				  <div class="text" style = "color: white;">What is the importance of energy?</div>
+				</div>
+
+				<div class="mySlides fade" style = "background-color: #280058;">
+					<div class="numbertext">4 / 4</div>
+					<center><a href = "subsection_3.html"><img src="Blah1.gif" style="width:650px"></a></center>	
+					<div class="text" style = "color: white;">How can we save energy?</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+				</div>
+				<br>
+				
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				  <span class="dot" onclick="currentSlide(4)"></span>
+				</div>
+				
+			<table>
+				<tr>
+					<td class="content">
+						<h3>How can we save energy?</h3>
+						<ul>
+							<li>Adjust your day-to-day behaviors</li>
+							<li>Replace your light bulbs</li>
+							<li>Use smart power strips</li>
+							<li>Install a programmable or smart thermostat</li>
+							<li>Purchase energy efficient appliances</li>
+							<li>Reduce your water heating expenses</li>
+							<li>Install energy efficient windows</li>
+							<li>Upgrade your HVAC system</li>
+							<li>Weatherize your home</li>
+							<li>Insulate your home</li>
+						</ul>
+					</td>
+					<td class="blank"></td>
+					<td class="menu">
+						<b>
+							<ul>
+								<li><a href = "index.html">Home</a></li>
+								<li><a href = "mainsection.html">Main</a></li>
+								<li><a href = "subsection_1.html">What is Energy Conservation?</a></li>
+								<li><a href = "subsection_2.html">What is importance of energy?</a></li>
+								<li><a href = "subsection_3.html">How can we save energy?</a></li>
+								<li class='profile'>
+									@Developed By: 
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parv Maheshwari (VIII-C)
+									<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inesh Agarwal (VII-E)
+								</li>
+							</ul>
+						</b>
+					</td>
+				</tr>
+			</table>
+			<script>
+				var slideIndex = 1;
+				showSlides(slideIndex);
+				
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+				
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+				
+				function showSlides(n) {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1}    
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+					  slides[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					  dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				}
+				</script>
+			<script>var preloader;
+	
+				function preload(opacity) {
+						if(opacity <= 0) {
+								showContent();
+						}
+						else {
+								preloader.style.opacity = opacity;
+								window.setTimeout(function() { preload(opacity - 0.05) }, 100);
+						}
+				}
+				
+				function showContent() {
+						preloader.style.display = 'none';
+						document.getElementById('content').style.display = 'block';
+				}
+				
+				document.addEventListener("DOMContentLoaded", function () {
+						preloader = document.getElementById('preloader');
+						preload(1);
+				});</script>
+	 </div> 
+	</body>
+</html>
