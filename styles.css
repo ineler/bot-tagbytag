@@ -86,8 +86,9 @@ table{
     color: inherit;
 }
 .profile {
-    font-size: 10px;
+    font-size: 15px;
     color: gray;
+    padding: 40px;
 }
 #preloader {
     position: fixed;
